@@ -1,0 +1,21 @@
+name: secure_preview
+description: A Flutter widget and platform checks for hiding sensitive previews on potentially unsafe devices or displays.
+version: 0.0.1
+homepage: https://github.com/mhmd-abdelrazek/secure_preview
+dependencies:
+  flutter:
+    sdk: flutter
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+  flutter: '>=3.19.0'
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: com.securepreview.secure_preview
+        pluginClass: SecurePreviewPlugin
+      ios:
+        pluginClass: SecurePreviewPlugin
+      windows:
+        pluginClass: SecurePreviewPluginCApi
